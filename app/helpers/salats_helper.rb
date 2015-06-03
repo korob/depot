@@ -1,0 +1,2 @@
+module SalatsHelper
+end

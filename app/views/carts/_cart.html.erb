@@ -1,0 +1,10 @@
+<h2>Корзина</h2>
+<table>
+	<%= render(cart.line_items) %>
+	<tr class="total_line">
+		<td colspan="2">Итого</td>
+		<td class="total_cell"><%= number_to_currency(cart.total_price) %></td>
+	</tr>
+</table>
+<%= button_to 'Оформить', new_order_path, method: :get %>
+<%= button_to 'Отчистить Корзину', cart, method: :delete %>

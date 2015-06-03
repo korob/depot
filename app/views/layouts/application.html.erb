@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Суши Кэт</title>
+  <meta name="description" content="Суши Кэт. Бесплатная доставка Суши. Казань.">
+  <meta name="keywords" content="доставка, бесплатно, суши, роллы, казань, суши-кэт">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class='<%= controller.controller_name %>'>
+	<div id="banner">
+		<%= image_tag("logo.png") %>
+		<p> Суши кэт. </p>
+		<p> График работы: каждый день с 09:00 до 00:00.</p>
+		<p> Наш адрес: г. Казань, ул. Симонова, 14.</p>
+	</div>
+	<div id="columns">
+		<div id="side">
+			<div id="cart">
+				<% if @cart %>
+					<%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+						<%= render @cart %>
+					<% end %>
+				<% end %>
+			</div>
+			<ul>
+				<li><%= link_to "Жареные Роллы", controller: 'hotrolls' %></li>
+				<li><%= link_to "Запеченные Роллы", controller: 'zaprolls'%></li>
+				<li><%= link_to "Фирменные Роллы", controller: 'firmrolls' %></li>
+				<li><%= link_to "Классические Роллы", controller: 'clasrolls'%></li>
+				<li><%= link_to "Ассорти", controller: 'asss'%></li>
+				<li><%= link_to "Дополнительно к Роллам", controller: 'dopkrolls'%></li>
+				<li><%= link_to "Суши", controller: 'sushis'%></li>
+				<li><%= link_to "Холодные закуски", controller: 'coldrolls'%></li>
+				<li><%= link_to "Салаты", controller: 'salats'%></li>
+				<li><%= link_to "Эксклюзив", controller: 'exels'%></li>
+				<li><%= link_to "Напитки", controller: 'naps'%></li>
+				<li><%= link_to "Десерты", controller: 'deserts'%></li>
+			</ul>
+
+			<% if session[:user_id] %>
+			<ul>
+				<li><%= link_to 'Заказы', orders_path %></li>
+				<li><%= link_to 'Товары', products_path %></li>
+				<li><%= link_to 'Пользователи', users_path %></li>
+			</ul>
+			<%= button_to 'Выход', logout_path, method: :delete %>
+			<% end %>
+
+		</div>
+		<div id="main">
+			<%= yield %>
+		</div>
+	</div>
+	<div id="futer">
+		<footer>
+			<%= image_tag("logo.png") %>
+			<%= image_tag("logo.png") %>
+			<%= image_tag("logo.png") %>
+			<%= image_tag("logo.png") %>
+			<%= image_tag("logo.png") %>
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,144 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+	margin: 0;
+	width: 100%;
+	background-color: #D4D8D1;
+}
+#banner {
+	background: #332C2F;
+	padding: 10px;
+	border-bottom: 2px solid;
+	color: #D4D8D1;
+	text-align: left;
+
+	img {
+		float: right;
+		width: 117px;
+		height: 86px;
+		padding-right: 10px;
+		padding-top: 17px;
+	}
+	p {
+		font-size: 16px;
+	}
+}
+
+#notice {
+	color: #000 !important;
+	border: 2px solid red;
+	padding: 1em;
+	margin-bottom: 2em;
+	background-color: #67655D;
+	font: bold smaller sans-serif;
+}
+
+#columns {
+	background: #332C2F;
+
+	#main {
+		margin-left: 17em;
+		padding: 1em;
+		background: #D4D8D1;
+	}
+
+	#side {
+		float: left;
+		padding: 1em 2em;
+		width: 13em;
+		background: #332C2F;
+
+		form, div {
+			display: inline;
+		}
+		input {
+			font-size: small;
+		}
+
+		#cart{
+			font-size: smaller;
+			color: white;
+
+			table {
+				border-top: 1px dotted #B74934;
+				border-bottom: 1px dotted #B74934;
+				margin-bottom: 10px;
+			}
+		}
+
+		ul {
+			padding: 0;
+
+			li {
+				list-style: none;
+
+				a {
+					color: #B74934;
+					font-size: small;
+				}
+			}
+		}
+	}
+}
+
+#depot_form {
+	fieldset {
+		background: #efe;
+		legend {
+			color: #dfd;
+			background: #141;
+			font-family: sans-serif;
+			padding: 0.2em 1em;
+		}
+	}
+	form {
+		label {
+			width: 5em;
+			float: left;
+			text-align: right;
+			padding-top: 0.2em;
+			margin-right: 0.1em;
+			display: block;
+		}
+		select, textarea, input {
+			margin-left: 0.5em;
+		}
+		submit {
+			margin-left: 4em;
+		}
+		br {
+			display: none
+		}
+	}
+}
+
+#futer {
+	height: 100px;
+	background-color: #332C2F;
+	border-top: 2px solid #D4D8D1;
+	position: relative;
+	clear:both;
+
+	img {
+		padding-top: 10px;
+		padding-left: 10px;
+		width: 117px;
+		height: 86px;
+		margin-left: 100px;
+		display: inline;
+	}
+}
