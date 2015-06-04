@@ -1,7 +1,4 @@
 source 'http://rubygems.org'
-ruby '2.1.5'
-
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
 # Use sqlite3 as the database for Active Record
@@ -10,9 +7,10 @@ group :development do
   gem 'sqlite3'
 end
 group :production do
-  gem 'pg', '0.15.1'
-  gem 'rails_12factor', '0.0.2'
+  gem 'pg'
+  gem 'rails_12factor'
 end
+gem 'magic_encoding'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -48,3 +46,5 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'bcrypt', '~> 3.1.7'
 gem 'russian', '~> 0.6.0'
+
+ruby '2.1.5'

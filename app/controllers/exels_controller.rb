@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ExelsController < ApplicationController
   skip_before_action :authorize
 	include CurrentCart

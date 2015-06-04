@@ -50,6 +50,7 @@ GEM
     jquery-ui-rails (5.0.5)
       railties (>= 3.2.16)
     json (1.8.2)
+    magic_encoding (0.0.2)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.5)
@@ -125,9 +126,10 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   jquery-ui-rails
-  pg (= 0.15.1)
+  magic_encoding
+  pg
   rails (= 4.1.8)
-  rails_12factor (= 0.0.2)
+  rails_12factor
   russian (~> 0.6.0)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

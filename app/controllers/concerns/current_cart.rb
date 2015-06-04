@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module CurrentCart
 	extend ActiveSupport::Concern
 

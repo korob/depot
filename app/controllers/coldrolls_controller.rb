@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ColdrollsController < ApplicationController
   skip_before_action :authorize
 	include CurrentCart

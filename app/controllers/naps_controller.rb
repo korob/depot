@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class NapsController < ApplicationController
   skip_before_action :authorize
 	include CurrentCart

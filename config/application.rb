@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
@@ -7,8 +8,8 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 module Depot
   class Application < Rails::Application
-    config.encoding = "utf-8"
-    config.i18n.default_locale = :ru
+      config.encoding = "utf-8"
+
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class FirmrollsController < ApplicationController
   skip_before_action :authorize
 	include CurrentCart
